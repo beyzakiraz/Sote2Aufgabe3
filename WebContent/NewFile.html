@@ -3,8 +3,27 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+
+<script type="text/javascript">
+	function manipulate(){
+		var derWert=document.getElementById("unserinput").value;
+		
+		var knoten=document.createElement("h4");
+		var knoteninhalt=document.createTextNode(derWert);
+		knoten.appendChild(knoteninhalt);
+		document.getElementById("austausch").appendChild(knoten);
+	}
+
+
+</script>
 </head>
 <body>
 	<h1>Ueberschrift</h1>
+	<form>
+
+		<p><input type="text" id="unserinput"></p>
+		<input type="button" value="Einfügen" onclick="manipulate()">
+		<div id="austausch">Text</div>
+	</form>
 </body>
 </html>
